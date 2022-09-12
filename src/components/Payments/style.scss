@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.product-select__controls__payments {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &__paypal {
+    @include button-primary('purple-ghost');
+    width: 300px;
+    @media screen and (min-width: 400px) {
+      width: 370px;
+    }
+    background-color: #ffc51f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 25px;
+    margin-top: 20px; //hack to fix shipping counter on BJ2 page
+    border: none;
+
+    &__logo {
+      height: 19px;
+      margin-left: 10px;
+    }
+  }
+
+  &__more-options {
+    @include button-primary('purple-ghost');
+    width: 300px;
+    @media screen and (min-width: 400px) {
+      width: 370px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+}

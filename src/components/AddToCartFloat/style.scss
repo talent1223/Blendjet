@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.add-to-cart {
+  &__mobile-float {
+    @include modal-transition;
+    opacity: 0;
+    visibility: hidden;
+
+    &.float-show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @include respond-to('small') {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $primary-purple-tint;
+      z-index: 10;
+      height: 75px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .mobile-swatch {
+      margin-right: 5px;
+    }
+  }
+}
+
+.mobile-variant-select {
+  position: fixed;
+  bottom: 75px;
+  background-color: $primary-purple-tint;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 0;
+  @include modal-transition;
+  opacity: 0;
+  visibility: hidden;
+
+  &.float-show {
+    opacity: 1;
+    visibility: visible;
+  }
+}

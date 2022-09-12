@@ -1,0 +1,8 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+.add-to-cart {
+  margin-top: 24px;
+  .add-to-cart-button {
+    width: 260px;
+  }
+}

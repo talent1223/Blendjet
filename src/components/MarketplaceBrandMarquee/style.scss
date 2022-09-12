@@ -1,0 +1,88 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.scrolling-marquee {
+  padding: 1.5rem 0;
+  background: var(--bg);
+  position: relative;
+
+  &__title {
+    text-align: center;
+    font-family: 'Bold';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  &__image {
+    padding: 0 2rem;
+
+    img {
+      height: 2rem;
+    }
+  }
+
+  &__repeating-text {
+    padding: 0 2rem;
+    text-transform: uppercase;
+    font-family: 'Bold';
+    font-size: 18px;
+    font-style: italic;
+    line-height: 24px;
+    letter-spacing: 2.5px;
+    text-align: center;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    min-width: 40px;
+    width: 15%;
+    top: 0;
+    z-index: 2;
+    background: var(--bg);
+  }
+
+  &:before {
+    left: 0;
+    mask-image: -webkit-gradient(
+      linear,
+      0% 0%,
+      100% 0%,
+      from(rgb(0, 0, 0)),
+      to(transparent)
+    );
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      0% 0%,
+      100% 0%,
+      from(rgb(0, 0, 0)),
+      to(transparent)
+    );
+  }
+
+  &:after {
+    right: 0;
+    mask-image: -webkit-gradient(
+      linear,
+      100% 0%,
+      0% 0%,
+      from(rgb(0, 0, 0)),
+      to(transparent)
+    );
+
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      100% 0%,
+      0% 0%,
+      from(rgb(0, 0, 0)),
+      to(transparent)
+    );
+  }
+}

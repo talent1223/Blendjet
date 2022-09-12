@@ -1,0 +1,215 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.modal {
+  align-items: center;
+}
+
+.modal-content {
+  max-height: 100vh;
+  overflow: hidden;
+}
+.modal-container {
+  position: relative;
+  overflow-y: auto;
+  pointer-events: auto;
+  width: 810px;
+  max-width: 810px;
+  margin: 0;
+  padding: 0px;
+  @media screen and (max-width: 1024px) {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  height: auto;
+}
+
+.bio {
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+
+    &__image-container {
+      padding: 35px;
+      position: relative;
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      &__img {
+        height: 200px;
+        width: 169px;
+        object-fit: cover;
+        object-position: center bottom;
+        @media screen and (max-width: 480px) {
+          height: 373px;
+          width: auto;
+          -o-object-fit: cover;
+          object-fit: cover;
+          -o-object-position: center;
+          object-position: center;
+        }
+      }
+
+      &__img-mobile {
+        height: 373px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__decrement {
+      position: absolute;
+
+      @media screen and (max-width: 1024px) {
+        top: 170px;
+        left: 0;
+      }
+    }
+
+    &__increment {
+      position: absolute;
+      @media screen and (max-width: 1024px) {
+        top: 170px;
+        right: 0;
+      }
+    }
+
+    &__text-container {
+      margin-top: 35px;
+      width: 500px;
+      margin-bottom: 39px;
+      // text-align: left;
+      @media screen and (max-width: 1024px) {
+        text-align: center;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+      }
+
+      &__name {
+        font-family: Medium;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 3.5px;
+        color: $primary-purple;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+      &__title {
+        font-family: Regular;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.55px;
+        color: $grayscale-gray;
+        margin-bottom: 11px;
+      }
+
+      &__tag {
+        max-width: 125px;
+        margin-bottom: 21px;
+      }
+
+      &__text-block {
+        font-family: Regular;
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: 0.5px;
+        color: $grayscale-gray;
+        text-align: left;
+        @media screen and (max-width: 1024px) {
+          padding: 0 20px;
+        }
+
+        & p {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  &__favorites {
+    background-image: linear-gradient(to bottom, #32b3d6, #1e90bb);
+    height: 288px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      height: 550px;
+    }
+    @media screen and (max-width: 480px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100vw;
+      &__item:last-child {
+        width: 100%;
+      }
+    }
+    &__item {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      color: $grayscale-white;
+
+      &__category {
+        font-family: Medium;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.58px;
+        text-align: center;
+
+        margin-bottom: 20px;
+      }
+
+      &__image-container {
+        width: 156px;
+        height: 156px;
+
+        &__img {
+          width: 134px;
+          height: 134px;
+          object-fit: cover;
+          margin: 0 auto;
+          display: block;
+          border-radius: 12px;
+        }
+      }
+
+      &__name {
+        font-family: Bold;
+        font-size: $text-small;
+        line-height: 1.17;
+        letter-spacing: 1.75px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    &__mobile {
+      &__top-row {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      &__bottom-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__blendjet-margin {
+        margin-right: 60px;
+      }
+    }
+  }
+}

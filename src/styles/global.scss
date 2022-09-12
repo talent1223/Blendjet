@@ -1,0 +1,253 @@
+/* ---------- Global ---------- */
+
+// Keep this file as lean as possible! Only include SASS partials and rule sets
+// that are truly global, i.e., used in more than one module or page. This
+// includes: reset rules, element rules, rules for high-level containers, fonts,
+// small utitlity/helper classes, and anything else can is clearly repeated
+// multiple times across modules.
+
+// Many of these come from Nuxt/app.#######.css. Only bring over the ones that are
+// actually in use.
+
+// 1. RESET
+// 2. VARIABLES
+// 3. GLOBAL
+// 4. FONTS
+// 5. UTILITY
+// 6. OVERRIDES/HACKS
+
+//
+// ========================================
+// RESET
+// ========================================
+//
+
+@import './reset';
+
+//
+// ========================================
+// VARIABLES
+// ========================================
+//
+
+@import './variables';
+
+//
+// ========================================
+// GLOBAL
+// ========================================
+//
+
+body {
+  color: #4a4a4a;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+a {
+  color: #3273dc;
+  cursor: pointer;
+  text-decoration: none;
+}
+.app,
+#portal {
+  color: #3b3b3b;
+  font-family: 'brandon-grotesque', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.h-screen {
+  height: 100vh;
+}
+.px-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.w-full {
+  width: 100% !important;
+}
+.over-scroll-y {
+  overflow-y: scroll;
+}
+.flex-nowrap-desktop {
+  @media (min-width: 1025px) {
+    flex-wrap: nowrap !important;
+  }
+}
+.overflow-visible {
+  overflow: visible;
+}
+.w-max {
+  width: max-content;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+.space-between {
+  justify-content: space-between !important;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+// Styles for #header apply to the element <section data-outsmartly="header">
+// which is in projects/blendjet/worker/router/handlers/product/index.html
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+}
+hr {
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+}
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border: none;
+  border-radius: 50px;
+  display: block;
+  height: 1rem;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: $grayscale-light-gray;
+}
+progress[value],
+progress[value]::-webkit-progress-bar {
+  background-color: $grayscale-light-gray;
+}
+progress[value]::-webkit-progress-value {
+  background-color: $primary-purple;
+}
+
+progress[value].white::-moz-progress-bar {
+  background-color: #ffffff50;
+}
+progress[value].white,
+progress[value].white::-webkit-progress-bar {
+  background-color: #ffffff50;
+}
+progress[value].white::-webkit-progress-value {
+  background-color: white;
+}
+
+//
+// ========================================
+// FONTS
+// ========================================
+//
+
+@import './fonts';
+
+//
+// ========================================
+// UTILITY CLASSES
+// ========================================
+//
+.hidden {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .is-hidden-mobile {
+    display: none !important;
+  }
+}
+.is-sr-only {
+  border: none !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 0.01em !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 0.01em !important;
+}
+// `svg-icon` is a utility class that can be used for any square SVG icon. The
+// width and height are both set to 1em here ("em" not "rem"), and then the icon
+// size can be easily controlled via font-size, either on the <svg> itself or a
+// parent.
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+//
+// ========================================
+// OVERRIDES/HACKS
+// ========================================
+//
+
+// @TODO: clean these up, put them where they belong.
+
+// We add class "lisa-frank" to <div class="app"> when one of the Lisa Frank
+// variants is selected.
+.lisa-frank {
+  .blendjet-banner {
+    background: linear-gradient(to bottom right, $lisa-frank1 0, $lisa-frank2);
+  }
+  .add-to-cart-button,
+  .media-content__main__features {
+    background: $lisa-frank2;
+  }
+}
+
+// Formerly in _variables.scss:
+// Ryan edit to make sure product title doesn't expand mobile cart
+@media (max-width: 576px) {
+  .product-details__title {
+    max-width: 150px;
+  }
+  .cart-container {
+    max-width: 377px;
+  }
+}
+
+// Formerly in _variables.scss:
+//hack by Ryan to fix cart on smaller screens
+@media (max-device-width: 768px) {
+  .ipadFix {
+    max-width: 287px;
+  }
+}
+
+// Formerly in _variables.scss:
+//hack by Ryan to fix cart on iPad Pro
+@media (min-device-width: 769px) and (max-device-width: 1024px) {
+  .ipadFix {
+    max-width: 306px;
+  }
+}

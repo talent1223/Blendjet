@@ -1,0 +1,215 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.media-content {
+  &__main {
+    display: flex;
+    flex-flow: row wrap;
+
+    &__details {
+      width: 50%;
+      background: $primary-purple-tint;
+      padding-top: 50px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      @include respond-to('small') {
+        width: 100%;
+      }
+
+      &__content-block {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-bottom: 80px;
+        width: 520px;
+
+        @include respond-to('small') {
+          width: auto;
+        }
+
+        &__heading {
+          font-size: 24px;
+          font-family: Bold;
+          letter-spacing: 4px;
+          line-height: 1.17;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-purple;
+          margin-bottom: 15px;
+          max-width: 475px;
+
+          @include respond-to('small') {
+            font-size: 18px;
+            line-height: 1.22;
+            letter-spacing: 2.5px;
+            padding: 0 15px;
+          }
+        }
+
+        &__text {
+          font-family: Regular;
+          font-size: 14px;
+          letter-spacing: 0.51px;
+          line-height: 1.29;
+          color: $grayscale-gray;
+          text-align: center;
+          margin-bottom: 35px;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+
+        &__media {
+          &__video {
+            width: 520px;
+            object-fit: contain;
+
+            @include respond-to('small') {
+              height: auto;
+              width: 100%;
+
+              video {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        &__image-container {
+          display: flex;
+          justify-content: center;
+        }
+
+        &__img {
+          border-radius: 12px;
+          object-fit: cover;
+          object-position: center;
+          @include respond-to('small') {
+            border-radius: 0;
+          }
+        }
+      }
+
+      &__specs {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 520px;
+        padding: 0 20px;
+        @include respond-to('small') {
+          width: auto;
+        }
+
+        &__heading {
+          font-size: 24px;
+          font-family: Bold;
+          letter-spacing: 4px;
+          line-height: 1.17;
+          text-transform: uppercase;
+          text-align: center;
+          color: $primary-purple;
+          margin-bottom: 15px;
+        }
+
+        &__text {
+          font-family: Regular;
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          line-height: 1.29;
+          color: $grayscale-gray;
+          text-align: center;
+          margin-bottom: 35px;
+          padding: 0 15px;
+        }
+
+        &__list {
+          font-family: Regular;
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          line-height: 1.29;
+          color: $grayscale-gray;
+          & ul {
+            list-style-type: square;
+            padding: 0 35px;
+          }
+          & li {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.media-tile {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 80px;
+  width: 520px;
+
+  @include respond-to('small') {
+    width: auto;
+  }
+
+  // HEADER
+  &__header {
+    font-size: 24px;
+    font-family: Bold;
+    letter-spacing: 4px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    text-align: center;
+    color: $primary-purple;
+    margin-bottom: 15px;
+    @include respond-to('small') {
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 2.5px;
+      padding: 0 10px;
+    }
+  }
+
+  // TEXT
+  &__text {
+    font-family: Regular;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.29;
+    color: $grayscale-gray;
+    text-align: center;
+    margin-bottom: 35px;
+    @include respond-to('small') {
+      padding: 0 20px;
+    }
+  }
+
+  // MEDIA
+  &__media {
+    width: 520px;
+    height: 520px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
+    @include respond-to('small') {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
+
+    video,
+    img {
+      object-fit: cover;
+    }
+
+    &__video {
+      width: 100%;
+    }
+
+    &__image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

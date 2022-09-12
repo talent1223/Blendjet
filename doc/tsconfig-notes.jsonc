@@ -1,0 +1,142 @@
+{
+  "compilerOptions": {
+    // Allow JavaScript files to be imported inside your project, instead of
+    // just .ts and .tsx files. Default: false.
+    // "allowJs": false,
+
+    // When set to true, allowSyntheticDefaultImports allows you to write an
+    // import like:
+    // - `import React from "react";`
+    // instead of:
+    // - `import * as React from "react";`
+    // "allowSyntheticDefaultImports": true,
+    // Default: true if module = "system", or esModuleInterop is true and
+    // module is not "es6/es2015" or "esnext". Else, false.
+
+    // Note! `allowSyntheticDefaultImports` is a "viral" option. If we have to
+    // turn this on in order to make our types work, then everyone who consumes
+    // our types will also have to turn it on. Consider using a "non-ECMA script
+    // compliant" import instead:
+    // import libraryModule = require('./libraryName');
+    // const method = libraryModule();
+
+    // Ensures that your files are parsed in the ECMAScript strict mode, and
+    // emit "use strict" for each source file. Default: true if strict, else
+    // false.
+    // "alwaysStrict": true,
+
+    // Fixes potential problems that might occur when CommonJS modules exist
+    // along with ES6 modules in the same project.  Default: false.
+    "esModuleInterop": true,
+    // Note! `esModuleInterop` is a "viral" option. If we have to turn this on
+    // in order to make our types work, then everyone who consumes our types
+    // will also have to turn it on. Consider using a "non-ECMA script
+    // compliant" import instead:
+    // import libraryModule = require('./libraryName');
+    // const method = libraryModule();
+
+    // When true, TypeScript will issue an error if a program tries to include a
+    // file by a casing different from the casing on disk. Default: false.
+    // "forceConsistentCasingInFileNames": true,
+
+    // Gives you faster subsequent builds. Tells TypeScript to save information
+    // about the project graph from the last compilation to files stored on
+    // disk. This creates a series of .tsbuildinfo files in the same folder as
+    // your compilation output. They are not used by your JavaScript at runtime
+    // and can be safely deleted.
+    "incremental": true,
+
+    // When true TypeScript will warn you if you write certain code that can'’'t
+    // be correctly interpreted by a single-file transpilation process (such as
+    // the kind that Babel does).
+    // "isolatedModules": true,
+
+    // Controls how JSX constructs are emitted in JavaScript files. Only affects
+    // .tsx files. Allowed: preserve, react, react-native, react-jsx,
+    // react-jsxdev. Default: react.
+    "jsx": "react-jsx",
+
+    // Declares the module specifier to be used for importing the jsx and jsxs
+    // factory functions when using jsx. Default: react.
+    "jsxImportSource": "preact",
+
+    // Change the set of type definitions for built-in JS APIs. Examples: "DOM",
+    // "DOM.Iterable", "ESNext".
+    // "lib": ["esnext"],
+
+    // Sets the module system for the program. Set to `commonjs` to compile for
+    // a Node environment. Allowed: "amd", "commonjs", "es2020", "es2022",
+    // "es6/es2015", "esnext", "node12", "nodenext", "none", "system", "umd",
+    "module": "commonjs",
+
+    // Specify the module resolution strategy. Allowed: "classic", "node". You
+    // probably won’t need to use "classic" in modern code. Default: Classic if
+    // module is AMD, UMD, System, or ES6/ES2015. Matches if module is "node12"
+    // or "nodenext". Else: Node.
+    "moduleResolution": "node",
+
+    // Do not emit compiler output files like JavaScript source code,
+    // source-maps or declarations. This makes room for another tool like Babel
+    // to handle converting the TypeScript file to Javascript. Default: false.
+    // "noEmit": true,
+
+    // When enabled, TypeScript will check all code paths in a function to
+    // ensure they return a value. Default: false.
+    "noImplicitReturns": true,
+
+    // Where the compiled JS files are going to be placed
+    "outDir": "./dist",
+
+    // Do not erase const enum declarations in generated code. Default: false.
+    // "preserveConstEnums": true,
+
+    // Strips all comments from TypeScript files when converting into
+    // JavaScript. Default: false.
+    "removeComments": true,
+
+    // Allows importing modules with a '.json' extension, which is a common
+    // practice in Node projects. This includes generating a type forthe import
+    // based on the static JSON shape. Default: false.
+    "resolveJsonModule": true,
+
+    // Skip type checking of declaration files. This can save time during
+    // compilation at the expense of type-system accuracy. Default: false.
+    // "skipLibCheck": true,
+
+    // Enables the generation of source maps for debugging. Default: false.
+    "sourceMap": true,
+
+    // Enables a wide range of type checking behavior that results in stronger
+    // guarantees of program correctness. Turning this on is equivalent to
+    // enabling *all* of the strict mode family options. You can then turn off
+    // individual strict mode family checks as needed. Default: false.
+    "strict": true,
+
+    // When true, null and undefined have their own distinct types and you'll
+    // get a type error if you try to use them where a concrete value is
+    // expected. Default: true if strict, else false.
+    "strictNullChecks": true,
+
+    // Determines the language level of the compiled JS. Changes which JS
+    // features are downleveled and which are left intact. Default: ES3.
+    // "target": "esnext",
+    "target": "ES2020"
+  },
+  "compileOnSave": true,
+  "include": ["src/**/*.ts", "mocks/**/*.json"],
+  "exclude": ["node_modules"],
+  "types": ["@types/jest"]
+}
+
+// For example if you wanted to use "jsxImportSource": "preact", you need a
+// tsconfig like:
+
+// {
+//   "compilerOptions": {
+//     "target": "esnext",
+//     "module": "commonjs",
+//     "jsx": "react-jsx",
+//     "jsxImportSource": "preact",
+//     "types": ["preact"]
+//   }
+// }

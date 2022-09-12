@@ -1,0 +1,31 @@
+.value-props {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  &__px-md {
+    padding-left: 15px;
+    padding-right: 15px;
+    grid-gap: 25px;
+  }
+  &__px-lg {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-gap: 13px;
+  }
+  &__pb-none {
+    padding-bottom: 0;
+  }
+  &__pb-lg {
+    padding-bottom: 20px;
+  }
+}
+.value-props__badges__img {
+  padding-bottom: 7px;
+  a {
+    display: block;
+  }
+  img {
+    display: block;
+  }
+}

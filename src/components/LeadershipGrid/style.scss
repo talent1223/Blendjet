@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.leadership {
+  &__grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 1550px;
+    @media screen and (max-width: 1366px) {
+      width: 100vw;
+    }
+  }
+}

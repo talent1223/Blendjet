@@ -1,0 +1,78 @@
+{
+  "name": "blendjet-ui",
+  "version": "6.4.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --watch --verbose",
+    "prepare": "husky install",
+    "build": "build-storybook -s public",
+    "dev": "NODE_ENV=development start-storybook -p 9009 -s public --no-manager-cache",
+    "dev_win": "SET NODE_ENV=development && start-storybook -p 9009 -s public --no-manager-cache",
+    "tsc": "tsc --noEmit",
+    "format": "prettier --write '**/*.{js,ts,tsx,json,md,scss}'",
+    "format-check": "prettier --check '**/*.{js,ts,tsx,json,md,scss}'"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,json,md}": "prettier --write"
+  },
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^15.11.1",
+    "@contentful/rich-text-react-renderer": "^15.12.0",
+    "@nacelle/client-js-sdk": "^3.6.0",
+    "@storybook/core-server": "^6.4.19",
+    "@types/lodash.get": "^4.4.6",
+    "contentful": "^9.1.18",
+    "es-cookie": "^1.3.2",
+    "keen-slider": "file:vendor/keen-slider-5.4.0.tgz",
+    "localforage": "^1.10.0",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.get": "^4.4.2",
+    "lodash.isequal": "^4.5.0",
+    "preact": "^10.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-fast-marquee": "^1.3.1",
+    "uuidv4": "^6.2.12",
+    "zustand": "^3.6.7"
+  },
+  "devDependencies": {
+    "@nacelle/shopify-checkout": "^0.0.7",
+    "@nacelle/types": "^5.0.4",
+    "@storybook/addon-a11y": "^6.4.8",
+    "@storybook/addon-actions": "^6.4.8",
+    "@storybook/addon-backgrounds": "^6.4.8",
+    "@storybook/addon-controls": "^6.4.8",
+    "@storybook/addon-links": "^6.4.8",
+    "@storybook/addon-storyshots": "^6.4.8",
+    "@storybook/addon-storysource": "^6.4.8",
+    "@storybook/addon-viewport": "^6.4.8",
+    "@storybook/addons": "^6.4.8",
+    "@storybook/builder-webpack5": "^6.4.8",
+    "@storybook/manager-webpack5": "^6.4.8",
+    "@storybook/preact": "^6.4.8",
+    "@storybook/source-loader": "^6.4.8",
+    "@types/jest": "^27.4.0",
+    "@types/lodash.clonedeep": "^4.5.6",
+    "@types/lodash.isequal": "^4.5.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.5.1",
+    "http-proxy-middleware": "^2.0.1",
+    "husky": "^7.0.4",
+    "jest": "^27.4.7",
+    "lint-staged": "^12.1.2",
+    "loader-utils": "^2.0.2",
+    "prettier": "^2.5.1",
+    "sass": "^1.43.3",
+    "sass-loader": "^12.4.0",
+    "sb": "^6.4.8",
+    "style-loader": "^3.3.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.4.4",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "storybook": {
+    "chromatic": {
+      "projectToken": "ls0ikhnwqt"
+    }
+  }
+}

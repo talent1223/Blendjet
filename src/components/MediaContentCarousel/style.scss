@@ -1,0 +1,53 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.media-content {
+  &__carousel {
+    @include carousel-root;
+
+    &__img {
+      @include carousel-image;
+    }
+
+    .arrow {
+      @include carousel-arrow;
+    }
+  }
+}
+
+.image {
+  position: relative;
+}
+
+.dots {
+  position: absolute;
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  transform: translateY(-23px);
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: #c5c5c5;
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid $primary-purple;
+  background: white;
+  outline: none;
+  transition: 150ms ease-out;
+}
+
+.dot:hover,
+.dot.active {
+  background: $primary-purple;
+  border: 1px solid white;
+}

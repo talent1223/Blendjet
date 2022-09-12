@@ -1,0 +1,146 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 160px;
+}
+
+.media-content {
+  &__main {
+    display: flex;
+    flex-flow: row wrap;
+
+    &__features {
+      background-color: #33499d;
+      width: 50%;
+      padding: 50px;
+
+      @include respond-to('small') {
+        width: 100%;
+        padding: 20px 0 0 0;
+      }
+    }
+  }
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  color: $grayscale-white;
+}
+
+.features-heading {
+  font-size: 24px;
+  font-family: Medium;
+  letter-spacing: 4px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.features-column {
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  @include respond-to('small') {
+    width: 80%;
+  }
+}
+
+.features-row {
+  display: flex;
+  margin-bottom: 40px;
+  @include respond-to('small') {
+    flex-flow: column nowrap;
+  }
+}
+
+.features-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    height: 70px;
+    width: 70px;
+    max-width: auto;
+  }
+}
+.features-text {
+  font-family: Medium;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  color: $grayscale-white;
+  text-align: center;
+  margin-bottom: 45px;
+
+  @include respond-to('small') {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+.features-text-block {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin-left: 25px;
+
+  @include respond-to('small') {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  &__title {
+    font-family: Bold;
+    font-size: $text-small;
+    letter-spacing: 1.75px;
+    line-height: 1.17;
+    text-transform: uppercase;
+
+    @include respond-to('small') {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-family: Regular;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.29;
+    @include respond-to('small') {
+      text-align: center;
+    }
+  }
+}
+
+.features-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 550px;
+  .features-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 30px;
+    width: 90px;
+    flex: 1;
+    min-height: 120px;
+
+    @include respond-to('small') {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+    .features-text-block {
+      margin: 0px;
+      text-align: center;
+    }
+  }
+}

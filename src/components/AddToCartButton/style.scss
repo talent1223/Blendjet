@@ -1,0 +1,55 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.add-to-cart-button {
+  @include button-primary('purple');
+
+  @include respond-to('small') {
+    width: 100%;
+  }
+  flex-flow: row nowrap;
+
+  &::disabled {
+    opacity: 0.5;
+  }
+
+  .inner-text {
+    transition: all 1s ease;
+  }
+}
+
+.add-to-cart-button-auto {
+  @include respond-to('small') {
+    width: auto;
+  }
+}
+
+.add-to-cart-button-small {
+  @include respond-to('small') {
+    padding-left: 20px; // override 2rem from button-primary mixin
+    padding-right: 20px; // override 2rem from button-primary mixin
+  }
+}
+
+.add-to-cart-button-bundle {
+  width: 370px;
+  @include respond-to('small') {
+    width: calc(100% - 10px);
+  }
+}
+
+.add-to-cart-button-height-large {
+  height: $button-height-large;
+}
+.add-to-cart-button-height-medium {
+  height: $button-height-medium;
+}
+.add-to-cart-button-height-small {
+  height: $button-height-small;
+}
+
+.add-to-cart-button-upsell {
+  background-color: #ffffff;
+  color: #373975;
+  min-width: 250px;
+}

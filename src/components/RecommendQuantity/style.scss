@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+.product-recommend-quantity {
+  width: 100%;
+  margin-top: 17px;
+}
+
+.product-recommend-quantity-title {
+  font-family: Bold;
+  letter-spacing: 1.75px;
+  text-align: center;
+  line-height: 1.33;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $primary-purple;
+}

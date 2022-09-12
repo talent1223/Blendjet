@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.darken-image {
+  filter: brightness(70%);
+}
+
+.what-drives-us {
+  &__image-grid {
+    display: flex;
+    flex-flow: row wrap;
+
+    .image-grid {
+      display: flex;
+      flex-flow: row wrap;
+      &__section {
+        width: 25%;
+        position: relative;
+        cursor: pointer;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+          padding: 0 10px 10px 10px;
+        }
+
+        &__img {
+          object-fit: cover;
+          object-position: center;
+          height: 100%;
+          min-height: 580px;
+          width: 100%;
+
+          @media screen and (max-width: 1024px) {
+            height: 349px;
+          }
+        }
+
+        &__text {
+          position: absolute;
+          bottom: 31px;
+          left: 21px;
+          font-family: Medium;
+          font-size: 32px;
+          line-height: 1.09;
+          letter-spacing: 5.33px;
+          color: $grayscale-white;
+          max-width: 309px;
+          text-transform: uppercase;
+          cursor: pointer;
+          z-index: 20;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: 3px;
+            bottom: 16px;
+            left: 18px;
+          }
+        }
+      }
+    }
+  }
+}

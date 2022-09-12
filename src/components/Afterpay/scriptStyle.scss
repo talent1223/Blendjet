@@ -1,0 +1,10 @@
+// Style <afterpay-placement> custom element
+afterpay-placement {
+  margin: 0;
+}
+
+.afterpayIsLoaded {
+  // this is needed only if this variation loads on the page
+  // and sets the bottom margin on the price above it
+  margin-bottom: 2px !important;
+}

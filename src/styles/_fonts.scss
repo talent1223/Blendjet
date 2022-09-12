@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Regular';
+  src: url('/static-489c224a/fonts/ModernEraTRIAL-Regular.otf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Medium';
+  src: url('/static-489c224a/fonts/ModernEraTRIAL-Medium.otf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bold';
+  src: url('/static-489c224a/fonts/ModernEraTRIAL-Bold.otf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BoldItalic';
+  src: url('/static-489c224a/fonts/ModernEraTRIAL-BoldItalic.otf');
+}
+// Unicode U+0025 is a percent sign `%` and U+0026 is an ampersand `&`. Using
+// unicode-range makes the font apply to only these glyphs, so only these glyphs
+// will be downloaded.
+@font-face {
+  font-family: 'Regular';
+  src: url('/static-489c224a/fonts/Gramatika-Regular.ttf');
+  unicode-range: U+25-26;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Medium';
+  src: url('/static-489c224a/fonts/Gramatika-Medium.ttf');
+  unicode-range: U+25-26;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bold';
+  src: url('/static-489c224a/fonts/Gramatika-Bold.ttf');
+  unicode-range: U+25-26;
+  font-display: swap;
+}
+// @font-face {
+//   font-family: 'BoldItalic';
+//   src: url('/static-489c224a/fonts/Gramatika-BoldItalic.ttf');
+//   unicode-range: U+25-26;
+// }
+// Brandon Grotesque fonts
+@font-face {
+  font-family: 'brandon-grotesque';
+  src: url('/static-489c224a/fonts/BrandonGrotesque-Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'brandon-grotesque';
+  src: url('/static-489c224a/fonts/BrandonGrotesque-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'brandon-grotesque';
+  src: url('/static-489c224a/fonts/BrandonGrotesque-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

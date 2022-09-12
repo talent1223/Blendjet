@@ -1,0 +1,231 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.drawer {
+  width: 750px;
+}
+.cart-upsells__close {
+  display: none;
+  @include respond-to('small') {
+    display: flex;
+  }
+}
+
+.flyout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-left: 1px solid #dedede7a;
+  @include gradient-primary-light-purple(to bottom);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: inherit;
+  max-width: 100%;
+
+  .cart-items {
+    flex-grow: 5;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 20px;
+    @include respond-to('small') {
+      width: 100vw;
+    }
+  }
+  .cart-upsells-wrapper {
+    max-width: 440px;
+  }
+  .cart-wrapper {
+    width: 394px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  cursor: pointer;
+  color: $primary-purple;
+}
+
+.item-divider {
+  background-color: #343a40;
+  width: 100%;
+  display: block;
+  height: 1px;
+  border: none;
+  border-color: transparent;
+  opacity: 0.5;
+  margin: 24px 0;
+}
+
+.flyout-cart-header {
+  position: relative;
+  margin: 20px 20px 0;
+}
+
+.flyout-cart-header-title {
+  font-size: 12px;
+  font-family: Bold;
+  line-height: 1.17;
+  letter-spacing: 1.75px;
+  text-align: left;
+  color: $primary-purple;
+}
+
+.cart-item {
+  display: flex;
+}
+
+.product-link {
+  text-decoration: none;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.product-image {
+  display: flex;
+  align-items: center;
+}
+
+.product-title-container {
+  width: 70%;
+}
+
+.product-details {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+
+  &__title {
+    display: block;
+    font-family: Bold;
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: 0.5px;
+    color: $primary-purple;
+  }
+
+  &__price {
+    font-family: Bold;
+    font-size: $text-small;
+    line-height: 1.83;
+    letter-spacing: 1.75px;
+    color: $primary-purple;
+    width: 30%;
+    text-align: right;
+  }
+
+  &__variant {
+    font-family: Regular;
+    font-size: 14px;
+    color: $grayscale-gray;
+    letter-spacing: 0.5px;
+  }
+}
+
+.switch {
+  font-weight: bold;
+}
+
+.quantity-input {
+  background: transparent;
+  text-align: center;
+  width: 2rem;
+  line-height: 2rem;
+  border: none;
+  padding-left: 5px;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  &:focus {
+    outline: none;
+  }
+}
+
+.cart-message {
+  text-align: center;
+  font-family: Bold;
+  font-size: $text-small;
+  line-height: 1.17;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: $alert-red;
+}
+
+.free-shipping {
+  padding: 0 9px 7px;
+}
+
+.free-shipping-svg {
+  height: 26px;
+  color: $primary-purple;
+  background-color: $grayscale-white;
+  // border: 1px solid $primary-purple;
+  // Border is $primary-purple but with some kind of opacity. Result is #9999ca.
+  border: 2px solid #9999ca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  font-size: 11px;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.cart-checkout {
+  padding: 10px;
+}
+
+.checkout-button {
+  @include button-primary('purple');
+  height: 50px;
+  &.checkout-button-cart-upsells {
+    position: relative;
+    min-width: 260px;
+    .loader {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 40px;
+      @include respond-to('small') {
+        right: calc(50% - 10px);
+      }
+    }
+    .checkout-text {
+      visibility: visible;
+      transition: all 0.5s ease;
+      &.hidden {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.checkout-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+// TODO: These column classes are recent additions. Should probably go in a
+// global scope. Move them once we have more instances.
+.column {
+  padding: 0.75rem;
+}
+
+.column.is-3 {
+  flex: none;
+  width: 25%;
+}

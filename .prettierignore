@@ -1,0 +1,9 @@
+node_modules
+coverage
+build
+dist
+storybook-static
+vendor
+
+# Ignore this one markdown file so I can format code examples the way I want
+convert-sass-to-css-modules.md

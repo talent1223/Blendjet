@@ -1,0 +1,264 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.blah {
+  width: 100%;
+}
+.our-journey {
+  background-image: linear-gradient(
+    to bottom,
+    #eeeeee,
+    #6f6fc9 24%,
+    #363996 53%,
+    #1e90bb 77%,
+    #c2e3f0 98%
+  );
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+
+  &__container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  &__container-inner {
+    width: 100%;
+    max-width: 7300px;
+  }
+
+  &__title {
+    font-family: Medium;
+    font-size: 37px;
+    line-height: 0.65;
+    letter-spacing: 5.4px;
+    color: $primary-purple;
+    text-align: center;
+    margin-top: 94px;
+    margin-bottom: 102px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 24px;
+      line-height: 0.86;
+      letter-spacing: 4.08px;
+      margin-top: 88px;
+      margin-bottom: 61px;
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 33px 50px;
+    color: $grayscale-white;
+    &.row-reverse {
+      flex-direction: row-reverse;
+    }
+
+    &.dark {
+      color: $primary-purple;
+    }
+    @media screen and (max-width: 1024px) {
+      margin: 0;
+      flex-direction: column-reverse;
+      padding: 23px 15px 23px 15px;
+      &.row-reverse {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &__side {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        padding: 23px 10px;
+      }
+
+      &--life {
+        text-align: right;
+      }
+    }
+
+    &--no-image {
+      max-width: 743px;
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    &__img {
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+    }
+
+    &__text-block {
+      min-width: 460px;
+
+      @media screen and (max-width: 1024px) {
+        min-width: auto;
+        width: 343px;
+        margin-bottom: 30px;
+      }
+
+      &__heading {
+        font-family: Bold;
+        font-size: 24px;
+        line-height: 1.1;
+        letter-spacing: 3.75px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 18px;
+          line-height: 1.22;
+          letter-spacing: 2.5px;
+          text-align: center;
+        }
+      }
+
+      &__main {
+        font-family: Regular;
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: 0.5px;
+
+        @media screen and (max-width: 1024px) {
+          text-align: center;
+        }
+
+        a {
+          color: white;
+          &:hover {
+            color: #000;
+          }
+        }
+
+        p {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &__dream {
+    .our-journey__section__side {
+      position: relative;
+      margin-bottom: 92px;
+      margin-top: 112px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      border-radius: 30px;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      @media screen and (max-width: 1024px) {
+        border-radius: 5px;
+        margin-top: 55px;
+        margin-bottom: 0px;
+        padding: 0px;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 55px;
+      margin-bottom: 0px;
+      border-radius: 5px;
+    }
+
+    h5 {
+      font-family: Regular;
+      font-size: 18px;
+      line-height: 1.28;
+      letter-spacing: 0.75px;
+      margin-bottom: 23px;
+    }
+
+    &__text-block {
+      max-width: 375px;
+      min-width: 343px;
+      color: $grayscale-white;
+      margin-left: 70px;
+      margin-top: 70px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      @media screen and (max-width: 1024px) {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding-top: 135px;
+        padding-bottom: 135px;
+      }
+
+      &__heading {
+        font-family: Medium;
+        font-size: 36px;
+        line-height: 1.08;
+        letter-spacing: 6px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 24px;
+          line-height: 1.17;
+          letter-spacing: 3.85px;
+        }
+      }
+
+      &__subheading {
+        font-family: Regular;
+        font-size: 18px;
+        line-height: 1.28;
+        letter-spacing: 0.75px;
+
+        @media screen and (max-width: 1024px) {
+          line-height: 1.19;
+          letter-spacing: 0.6px;
+        }
+      }
+
+      &__main {
+        font-family: Regular;
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: 0.5px;
+      }
+
+      & p {
+        margin-bottom: 23px;
+        @media screen and (max-width: 1024px) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &__cheers {
+    margin-bottom: 53px;
+    margin-top: 15px;
+    &__svg {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__blendjet-team {
+    font-family: Bold;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+  }
+}
+
+.text-purple {
+  color: $primary-purple;
+}

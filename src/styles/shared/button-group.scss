@@ -1,0 +1,17 @@
+/* ---------- button-group ---------- */
+
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 1s ease-in-out;
+  padding-left: 3px;
+  padding-right: 3px;
+
+  @include respond-to('small') {
+    justify-content: center;
+  }
+}

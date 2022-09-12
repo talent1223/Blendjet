@@ -1,0 +1,44 @@
+.text-ribbon {
+  background: var(--bgcolor);
+  background-size: cover;
+  background-position: top center;
+  scroll-padding: 100px;
+
+  &__content {
+    color: var(--color);
+    background: var(--left-bg), var(--right-bg);
+    background-position: 2rem bottom, calc(100% - 2rem) bottom;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center var(--align);
+    text-align: var(--align);
+    padding: 2rem;
+    max-width: calc(1400px + 4rem);
+    width: 100%;
+    margin: 0 auto;
+    min-height: var(--height);
+
+    @media screen and (max-width: 1024px) {
+      background: none;
+    }
+  }
+
+  &__content-inner {
+    max-width: var(--content-max-width);
+  }
+
+  &__title {
+    font-family: 'Bold';
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 3.5px;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-family: 'Regular';
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+  }
+}

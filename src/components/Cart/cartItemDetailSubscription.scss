@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.subscription-details {
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+}
+.subscription-pill {
+  border-radius: 25px;
+  color: $primary-purple;
+  background-color: $secondary-purple-4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: BoldItalic;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  width: 220px;
+}

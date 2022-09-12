@@ -1,0 +1,252 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.jetpacks,
+.product-slider {
+  .jetpack-cross-sell-container {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__heading {
+      font-family: Bold;
+      font-size: 24px;
+      line-height: 1.17;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 42px;
+      color: $primary-purple;
+      text-align: center;
+    }
+  }
+
+  .rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .carousel-list .carousel-slides .carousel-slide {
+    border: none !important;
+  }
+
+  .quantity-select {
+    height: 40px;
+  }
+
+  .info {
+    cursor: pointer;
+    margin-left: 7px;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    &__subheading {
+      display: flex;
+      justify-content: center;
+      font-family: Regular;
+      font-size: 12px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.17;
+      letter-spacing: 1.75px;
+      text-align: center;
+      color: $primary-purple;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .jetpack-title {
+    display: block;
+    text-align: center;
+    color: rgb(55, 55, 149);
+    font-size: 12px;
+    font-family: Bold;
+    line-height: 1.17;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .carousel-indicator-container {
+    height: 40px;
+    display: none;
+    justify-content: center;
+
+    //@media (min-width: 1400px) {
+    //  display: none;
+    //}
+    @include respond-to('small') {
+      display: flex;
+    }
+  }
+
+  .carousel-indicator {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+
+    &__left {
+      padding-right: 15px;
+    }
+
+    &__right {
+      padding-left: 15px;
+    }
+  }
+
+  .category {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    &__tag {
+      background-color: $secondary-purple-4;
+      border-radius: $border-radius;
+      text-transform: uppercase;
+      color: $primary-purple;
+      font-size: 12px;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      line-height: 2.2;
+      letter-spacing: 1.5px;
+      font-family: Regular;
+    }
+  }
+
+  .add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 23px;
+    &__quantity {
+      margin-right: 15px;
+    }
+  }
+
+  .subscribe-select {
+    display: flex;
+    justify-content: center;
+  }
+
+  .scale-enter-active,
+  .scale-leave-active {
+    transition: all 0.5s;
+  }
+  .scale-enter,
+  .scale-leave-active {
+    opacity: 0;
+    transform: scale(0.3) translateY(24px);
+  }
+
+  .button {
+    &:disabled {
+      @include button-primary('purple');
+      opacity: 0.5;
+    }
+  }
+
+  .clicked {
+    @include hover-transition;
+    width: 217.58px;
+  }
+
+  .jetpack-image {
+    height: 275px;
+    width: auto;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > a {
+      display: block;
+    }
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+}
+
+progress[value].is-small {
+  height: 0.3rem;
+  margin-bottom: 6px;
+}
+
+.bln-checkbox-container {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  cursor: pointer;
+  color: $primary-purple;
+}
+
+.bln-checkbox {
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+}
+
+.bln-checkbox-label {
+  font-family: Regular;
+  font-size: $text-small;
+  line-height: 1.17;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.bln-check.hide {
+  display: none;
+}
+
+.about-subscriptions {
+  &__heading {
+    text-align: center;
+    font-family: Medium;
+    font-size: 22px;
+    line-height: 1.14;
+    letter-spacing: 3.21px;
+    text-transform: uppercase;
+    color: $primary-purple;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__column {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__text {
+    font-family: Bold;
+    font-size: $text-small;
+    line-height: 1.17;
+    letter-spacing: 1.75px;
+    color: $primary-purple;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+}

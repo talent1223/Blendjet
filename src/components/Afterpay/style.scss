@@ -1,0 +1,517 @@
+.afterpayIsLoaded {
+  // this is needed only if this variation loads on the page
+  // and sets the bottom margin on the price above it
+  margin-bottom: 2px !important;
+}
+
+:host {
+  display: block;
+  margin-block-start: 16px;
+  margin-block-end: 16px;
+  white-space: normal;
+}
+.afterpay-paragraph {
+  font-size: 12px;
+  margin: 0px;
+  line-height: 1.5;
+  line-height: var(--messaging-line-height, 1.8);
+}
+.payment-amount + span {
+  padding-right: 2px;
+}
+
+.afterpay-main-text {
+  padding-right: 2px;
+}
+.afterpay-logo.brand-afterpay,
+.afterpay-logo.brand-afterpay svg {
+  width: 90px;
+  width: var(--logo-badge-width, 90px);
+  min-width: 50px;
+  min-height: 20px;
+}
+
+.afterpay-logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.afterpay-logo.type-badge {
+  margin: 1px 0 1px -3px;
+}
+
+/* override base badge's styles */
+.afterpay-logo.compact-badge {
+  padding-bottom: 2px;
+}
+.afterpay-logo.compact-badge,
+.afterpay-logo.compact-badge svg {
+  margin: initial;
+  margin-left: -1px;
+  width: var(--logo-badge-width, 86px);
+}
+/* use the brandMessagings width:height ratio to calc logo height */
+.afterpay-logo.type-badge svg,
+.afterpay-logo.type-badge {
+  height: calc(31 / 90 * var(--logo-badge-width, 90px));
+}
+
+.lockup-black,
+.lockup-black svg,
+.lockup-white,
+.lockup-white svg,
+.lockup-mint,
+.lockup-mint svg {
+  height: calc(0.23 * var(--logo-badge-width, 90px));
+}
+.afterpay-logo.compact-badge svg,
+.afterpay-logo.compact-badge {
+  height: calc(0.19 * var(--logo-badge-width, 86px) + 10px);
+}
+.afterpay-logo.black-on-mint .afterpay-logo-badge-background {
+  fill: #b2fce4;
+}
+
+.afterpay-logo.black-on-white .afterpay-logo-badge-background {
+  fill: white;
+}
+
+.afterpay-logo.white-on-black .afterpay-logo-badge-lockup {
+  fill: white;
+}
+.afterpay-logo.white-on-black .afterpay-logo-badge-background {
+  fill: black;
+}
+
+.afterpay-logo.mint-on-black .afterpay-logo-badge-lockup {
+  fill: #b2fce4;
+}
+.afterpay-logo.mint-on-black .afterpay-logo-badge-background {
+  fill: black;
+}
+
+.afterpay-logo.lockup-black .afterpay-logo-badge-lockup {
+  fill: #000000;
+}
+.afterpay-logo.lockup-white .afterpay-logo-badge-lockup {
+  fill: #ffffff;
+}
+.afterpay-logo.lockup-mint .afterpay-logo-badge-lockup {
+  fill: #b2fce4;
+}
+
+.afterpay-logo.lockup-black .afterpay-logo-badge-background,
+.afterpay-logo.lockup-white .afterpay-logo-badge-background,
+.afterpay-logo.lockup-mint .afterpay-logo-badge-background {
+  fill: transparent;
+}
+
+.afterpay-logo-link {
+  white-space: nowrap;
+  display: initial;
+}
+.afterpay-logo-link.afterpay-link-is-text {
+  white-space: unset;
+}
+#logo-link {
+  line-height: normal;
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+  background: transparent;
+  font-family: sans-serif;
+  font-size: smaller;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.afterpay-promo {
+  padding-right: 2px;
+}
+.afterpay-promo,
+.afterpay-min-spend {
+  margin: 0;
+}
+.afterpay-promo .promo-badge {
+  background-color: #b2fce4;
+  padding: 2px 5px;
+  border-radius: 64px;
+}
+.afterpay-promo .promo-badge.blink-animation strong {
+  animation: discountAmountAnimation 1.2s linear infinite;
+}
+
+@media (prefers-reduced-motion) {
+  .afterpay-promo .promo-badge.blink-animation strong {
+    animation: none;
+  }
+}
+@keyframes discountAmountAnimation {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.afterpay-promo-terms-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.afterpay-modal-component {
+  height: 100vh;
+}
+
+// body.afterpay-modal-body {
+//     margin: 0;
+//     background-color: #b2fce4
+// }
+
+// body.afterpay-modal-body.theme-white {
+//     background: #fff
+// }
+
+:-moz-ui-invalid:not(output) {
+  box-shadow: none;
+}
+
+.afterpay-modal-wrapper {
+  min-height: 100%;
+  padding: 0 24px;
+  background: #b2fce4;
+}
+
+.afterpay-modal-wrapper.theme-white {
+  background: #fff;
+}
+
+.afterpay-modal-wrapper * {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Italian Plate No2 Expanded', sans-serif;
+  color: #000;
+}
+
+.grid-container {
+  display: grid;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  font-size: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-areas: 'logo logo logo logo' 'headline headline headline headline' 'body-a body-b body-c body-d' 'body-e body-f body-g body-h' 'cbt-block cbt-block cbt-block cbt-block' 'footer footer footer footer';
+}
+
+.row-0 {
+  grid-area: logo;
+  padding-top: 45px;
+}
+
+.row-1 {
+  grid-area: headline;
+  padding: 3% 0 8% 0;
+}
+
+.process-step-1.process-icon-container {
+  grid-area: body-a;
+}
+
+.process-step-2.process-icon-container {
+  grid-area: body-b;
+}
+
+.process-step-3.process-icon-container {
+  grid-area: body-c;
+}
+
+.process-step-4.process-icon-container {
+  grid-area: body-d;
+}
+
+.process-step-1.process-subheading {
+  grid-area: body-e;
+}
+
+.process-step-2.process-subheading {
+  grid-area: body-f;
+}
+
+.process-step-3.process-subheading {
+  grid-area: body-g;
+}
+
+.process-step-4.process-subheading {
+  grid-area: body-h;
+}
+
+.row-3 {
+  grid-area: footer;
+}
+
+.grid-container > div {
+  align-content: stretch;
+}
+
+.afterpay-modal-logo svg {
+  width: 100%;
+  max-width: 275px;
+  height: auto;
+}
+
+h3.afterpay-modal-headline {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.process-icon-container {
+  align-self: end;
+}
+
+.process-icon-container svg {
+  width: auto;
+  height: auto;
+  max-width: 110px;
+  max-height: 95px;
+}
+
+.process-icon-container svg .c1 {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+.process-subheading {
+  padding: 10% 3% 0 3%;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+svg.afterpay-mobile,
+svg.sign-up-mobile {
+  display: none;
+}
+
+.row-3 {
+  padding: 8% 0 40px 0;
+}
+
+.disclaimer {
+  font-size: 12px;
+}
+
+.disclaimer-link {
+  color: #000;
+  text-decoration: underline;
+}
+
+.disclaimer-link:active {
+  color: #000;
+}
+
+.afterpay-footer-example {
+  margin-top: 1.875em;
+  font-size: x-small;
+  font-weight: 600;
+}
+
+.afterpay-underline {
+  text-decoration: underline;
+}
+
+.afterpay-bold {
+  font-weight: 700;
+}
+
+.afterpay-euro-symbol:after {
+  content: ' \20ac';
+  font-weight: 400;
+}
+
+.afterpay-reference-symbol {
+  font-weight: 400;
+  font-size: 0.5em;
+  vertical-align: text-top;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    max-width: 500px;
+    grid-template-columns: auto;
+    grid-template-areas: 'logo logo' 'headline headline' 'body-a body-b' 'body-e body-f' 'body-c body-d' 'body-g body-h' 'cbt-block cbt-block' 'footer footer';
+  }
+
+  .row-1 {
+    padding: 3% 0 20px 0;
+  }
+
+  .process-icon-container {
+    padding: 24px 0 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .afterpay-modal-wrapper {
+    padding: 0;
+  }
+
+  .grid-container {
+    padding: 30px;
+    text-align: left;
+    grid-template-columns: auto;
+    grid-template-areas: 'logo logo' 'headline headline' 'body-a body-e' 'body-b body-f' 'body-c body-g' 'body-d body-h' 'cbt-block cbt-block' 'footer footer';
+  }
+
+  .row-0 {
+    padding-top: 0;
+  }
+
+  .row-1 {
+    padding: 20px 0 8% 0;
+  }
+
+  h3.afterpay-modal-headline {
+    font-size: 40px;
+  }
+
+  svg.afterpay-desktop,
+  svg.sign-up-desktop {
+    display: none;
+  }
+
+  svg.afterpay-mobile,
+  svg.sign-up-mobile {
+    display: block;
+  }
+
+  .process-icon-container {
+    align-self: start;
+    padding: 12px 0;
+  }
+
+  .process-icon-container svg {
+    min-width: 30px;
+    max-height: 65px;
+  }
+
+  .process-subheading {
+    padding: 6px 0 6px 12px;
+    align-self: center;
+  }
+
+  .row-3 {
+    padding: 8% 0 20px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .afterpay-modal-logo svg {
+    max-width: 200px;
+  }
+
+  h3.afterpay-modal-headline {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 335px) {
+  h3.afterpay-modal-headline {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 260px) {
+  .grid-container {
+    font-size: 14px;
+  }
+
+  h3.afterpay-modal-headline {
+    font-size: 28px;
+  }
+}
+
+.afterpay-modal-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 999999999;
+}
+
+#afterpay-modal-component .visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#afterpay-modal-component #afterpay-modal {
+  background-color: #fff;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  width: 774px;
+  max-width: 100vw;
+  max-height: 100%;
+  line-height: 1.1;
+  outline: none;
+  display: block;
+  overflow: auto;
+}
+
+#afterpay-modal-component #afterpay-modal .afterpay-close-button {
+  position: absolute;
+  z-index: 3;
+  background-color: transparent;
+  min-width: 0;
+  top: 18px;
+  right: 18px;
+  border: 0;
+  cursor: pointer;
+}
+
+#afterpay-modal-component button {
+  min-width: 80px;
+  background-color: #848e97;
+  border-color: #848e97;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 3px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#afterpay-modal-component button:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}

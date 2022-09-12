@@ -1,0 +1,37 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.home-jetsetter {
+  background-color: $primary-purple-tint;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 47px;
+  padding-bottom: 14px;
+
+  @include respond-to('small') {
+    padding-top: 30px;
+  }
+
+  &__subheading {
+    display: flex;
+    justify-content: center;
+    font-family: Regular;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: 1.75px;
+    text-align: center;
+    color: $primary-purple;
+    margin-bottom: 46px;
+    text-transform: uppercase;
+
+    @include respond-to('small') {
+      margin-bottom: 25px;
+    }
+  }
+}

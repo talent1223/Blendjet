@@ -1,0 +1,183 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.product-select__controls__extend-warranty {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin-bottom: 25px;
+  cursor: pointer;
+  @include respond-to('small') {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-family: Regular;
+    margin-bottom: 15px;
+    color: $primary-purple;
+    font-size: 13px;
+    letter-spacing: 0.46px;
+    line-height: 1.38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .info {
+      margin-left: 5px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    margin-left: 7px;
+  }
+
+  &__button-group {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  &__button {
+    font-size: 10px;
+    letter-spacing: 0.83px;
+    line-height: 1.4;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include respond-to('small') {
+      padding: 0 10px;
+    }
+
+    &:first-child {
+      margin-right: 7px;
+    }
+
+    &:last-child {
+      margin-left: 7px;
+    }
+  }
+}
+
+.extend-active {
+  @include button-primary('purple');
+  border: 2px solid #373975;
+  height: 30px;
+  padding: 0 16px;
+  font-size: 10px;
+  @include respond-to('small') {
+    padding: 0 10px;
+  }
+}
+
+.extend-inactive {
+  @include button-primary('purple-ghost');
+  height: 30px;
+  padding: 0 16px;
+  font-size: 10px;
+  @include respond-to('small') {
+    padding: 0 10px;
+  }
+}
+
+.extend-modal {
+  &__container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 0 25px 25px;
+    font-family: Regular;
+    font-size: 14px;
+    line-height: 1.33;
+    letter-spacing: 0.5px;
+    color: $primary-purple;
+  }
+
+  &__svg-container {
+    padding-top: 25px;
+    margin-bottom: 20px;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      flex-flow: row wrap;
+      // height: 5.0rem;
+      justify-content: center;
+
+      @include respond-to('small') {
+      }
+    }
+
+    .plus {
+      height: 1rem;
+      margin: 0 0.7rem;
+    }
+    .logo {
+      height: 3.2rem;
+    }
+    .extend-logo {
+      min-height: 3rem;
+      margin-bottom: 0.8rem;
+    }
+    .merchant-logo {
+      max-height: 40px;
+    }
+  }
+
+  &__text {
+    max-width: 340px;
+
+    &__block {
+      margin-bottom: 15px;
+    }
+
+    &__list {
+      &__subheading {
+        font-size: 16px;
+        font-family: Bold;
+        letter-spacing: 2.5px;
+        margin-bottom: 15px;
+      }
+
+      &__items {
+        display: list-item;
+        list-style-type: disc;
+        text-align: left;
+      }
+    }
+
+    &__plan-details {
+      font-size: 14px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__why-choose {
+    &__support {
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 15px;
+
+      &__icon {
+        margin-right: 10px;
+      }
+    }
+
+    &__fees {
+      display: flex;
+      align-items: center;
+
+      &__icon {
+        margin-right: 10px;
+      }
+    }
+  }
+}

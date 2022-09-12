@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.section {
+  &__free-shipping {
+    @include gradient-primary-purple-turquoise(to left);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    @include respond-to('small') {
+      height: 55px;
+    }
+    .item {
+      font-family: BoldItalic;
+      font-size: 18px;
+      line-height: 1.33;
+      letter-spacing: 2.5px;
+      text-align: center;
+      color: $grayscale-white;
+      margin: 0 37.5px;
+      text-transform: uppercase;
+
+      @include respond-to('small') {
+        font-size: $text-small;
+        margin: 0 15px;
+      }
+    }
+  }
+}

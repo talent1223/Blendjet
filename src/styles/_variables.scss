@@ -1,0 +1,47 @@
+// This is an abstract SASS partial. It should *not* output any CSS rulesets.
+
+// Note: variables partial must be imported prior to importing mixins partial.
+
+$primary-purple: #373975;
+$primary-turquoise: #1e90bb;
+$primary-purple-tint: #f6f5fd;
+
+$secondary-purple-1: #2c2c77;
+$secondary-purple-2: #7f7fd1;
+$secondary-purple-3: #8291ed;
+$secondary-purple-4: #e0e0ff;
+
+$grayscale-black: #000000;
+$grayscale-gray: #999999;
+$grayscale-light-gray: #dddddd;
+$grayscale-offwhite: #f6f6f6;
+$grayscale-white: #ffffff;
+
+$rating-star-color: #ffc51f;
+$alert-red: #dd0000;
+$lisa-frank1: #e9008d;
+$lisa-frank2: #05aded;
+
+$primary-font: Medium;
+$modern-bold: 'ModernEra-Bold';
+$modern-regular: 'ModernEra-Regular';
+$modern-medium: 'ModernEra-Medium';
+
+$border-radius: 25px;
+$text-small: 12px;
+
+$breakpoints: (
+  'smaller': 768px,
+  'small': 1024px,
+  'large-min': 1025px,
+  'large': 1200px,
+) !default;
+
+$transition-timing-function: ease;
+$curtain-transition-duration: 300ms;
+$modal-transition-duration: 300ms;
+$drawer-transition-duration: 600ms;
+
+$button-height-large: 50px;
+$button-height-medium: 40px;
+$button-height-small: 24px;

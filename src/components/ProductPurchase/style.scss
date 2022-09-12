@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.product-select__controls {
+  width: 35%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: $primary-purple-tint;
+  text-align: center;
+  min-width: 550px;
+  padding: 0 75px 30px;
+  height: auto;
+  @include respond-to('small') {
+    width: 100%;
+    min-width: auto;
+    padding: 0px;
+  }
+}

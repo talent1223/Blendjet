@@ -1,0 +1,161 @@
+@import '../../styles/variables';
+@import '../../styles/_mixins';
+
+.section {
+  width: 100%;
+  padding: 1rem;
+
+  &__footer {
+    @include gradient-primary-black(to bottom);
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    height: auto;
+
+    // These stylesheets are not used currently, the corresponding component
+    // is commented out in the Vue tepmlates. But we leave it here in case it
+    // might be used again at some point
+    &__email-signup {
+      @include gradient-primary-purple-turquoise(to bottom);
+      height: 221px;
+      width: 100%;
+      text-transform: uppercase;
+      font-family: Bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column nowrap;
+
+      &__text {
+        font-size: 24px;
+        color: $grayscale-white;
+        font-family: Regular;
+        letter-spacing: 3.5px;
+        line-height: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 350px;
+      }
+
+      &__input {
+        background: transparent;
+        color: $grayscale-white;
+        height: 50px;
+        width: 256px;
+        &::placeholder {
+          color: $grayscale-white;
+        }
+
+        &:focus {
+          border: 1px solid $grayscale-white;
+        }
+      }
+
+      &__submit {
+        background: transparent;
+        border: 1px solid $grayscale-white;
+        height: 50px;
+
+        &:hover {
+          background-color: transparent;
+          border: 1px solid $grayscale-white;
+          @include hover-transition;
+        }
+      }
+    }
+
+    &__logo {
+      margin-top: 43px;
+    }
+
+    &__made-with {
+      color: $grayscale-white;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 16px;
+      font-size: 12px;
+      letter-spacing: 1.75px;
+      font-family: Bold;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__social-media {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      &__icon {
+        margin: 10px;
+        @media screen and (min-width: 360px) {
+          margin: 15px;
+        }
+      }
+    }
+
+    &__links {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-flow: column nowrap;
+      align-items: center;
+      text-align: center;
+
+      &__column {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        & > a {
+          color: $grayscale-white;
+          text-transform: uppercase;
+          text-align: left;
+          line-height: 16px;
+          font-size: 12px;
+          letter-spacing: 1.75px;
+          font-family: Bold;
+          padding: 15px;
+          text-decoration: none;
+          text-align: center;
+        }
+        &__subheading {
+          color: $grayscale-gray;
+          padding: 5px 0 5px 15px;
+          padding: 0;
+        }
+      }
+    }
+
+    &__legal {
+      display: flex;
+      align-items: center;
+      width: 95%;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      text-align: center;
+      & > a {
+        color: $grayscale-gray;
+        padding-right: 2rem;
+        font-size: $text-small;
+        padding-right: 0;
+      }
+      &__copyright {
+        margin-left: auto;
+        font-size: $text-small;
+        margin-left: initial;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.mobile-divider {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  background-color: #343a40;
+  border: none;
+  width: 100%;
+  display: block;
+  height: 1px;
+}

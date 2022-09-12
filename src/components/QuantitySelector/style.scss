@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.quantity-selector {
+  cursor: pointer;
+  border: 2px solid $primary-purple;
+  border-radius: 25px;
+  color: $primary-purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  // This hides the blue tap highlight that occurs to provide visual feedback
+  // that a user has correctly tapped a link or other tappable target. Note that
+  // hiding this feature is bad for accessibility. We do it here to match the
+  // current behavior on the BlendJet site.
+  -webkit-tap-highlight-color: transparent;
+}
+
+.quantity-selector-height-large {
+  height: $button-height-large;
+}
+.quantity-selector-height-medium {
+  height: $button-height-medium;
+}
+.quantity-selector-height-small {
+  height: $button-height-small;
+}

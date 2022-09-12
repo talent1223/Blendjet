@@ -1,0 +1,81 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.instagram-text-block {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  color: $primary-purple;
+  text-align: center;
+  margin-bottom: 65px;
+
+  &__title {
+    font-size: 54px;
+    font-family: BoldItalic;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    display: inline-flex;
+    justify-content: center;
+    .title-click {
+      color: $primary-purple;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    height: 40px;
+    position: relative;
+    top: 3px;
+    left: 8px;
+  }
+
+  &__on-instagram {
+    text-transform: uppercase;
+    font-family: Bold;
+    letter-spacing: 1.75px;
+    font-size: 12px;
+    line-height: 1.17;
+    margin-top: 5px;
+  }
+
+  &__content {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    size: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  &__hastag {
+    font-family: Bold;
+  }
+
+  &__follow {
+    display: flex;
+    justify-content: center;
+
+    &__button {
+      @include button-primary('purple-ghost');
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__text {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.instagram-carousel {
+  background-color: $primary-purple-tint;
+}
+
+.card-image-insta {
+  cursor: pointer;
+}

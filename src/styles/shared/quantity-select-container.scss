@@ -1,0 +1,12 @@
+/* ---------- quantity-select-container ---------- */
+
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.quantity-select-container {
+  margin-right: 10px;
+  @include respond-to('small') {
+    margin-right: 5px;
+    margin-left: 2px;
+  }
+}

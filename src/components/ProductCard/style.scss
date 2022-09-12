@@ -1,0 +1,83 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.product-card {
+  padding: 0;
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__image {
+    height: 275px;
+  }
+
+  &__info {
+    padding: 1.5rem;
+    display: grid;
+    grid-gap: 12px;
+
+    @include respond-to('small') {
+      padding: 1.15rem 0;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: #373795;
+    font-size: 12px;
+    font-family: Bold;
+    line-height: 1.17;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+  }
+
+  &__variant-title {
+    display: block;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__subscription {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__vendor {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__buy {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+    place-content: center;
+  }
+
+  &__browse {
+    @include button-primary('purple');
+
+    &:hover {
+      @include button-primary('purple');
+    }
+  }
+}
+
+.toggle-container,
+.quantity-select {
+  height: 40px;
+}
+
+@include respond-to('small') {
+  .text-container__option {
+    padding-top: 0;
+  }
+}
